@@ -1,0 +1,15 @@
+<div class="container mt-5">
+    <div class="row">
+        <div *ngFor = "let quiz of quizes" class = "col-md-4">
+            <div class = "card">
+                <img src="{{ quiz.imageUrl }}" class="card-img-top" alt="Quiz Image" />
+                <div class="card-body text-center">
+                    <h5 class="card-title">{{ quiz.name }}</h5>
+                    <hr />
+                    <p class="card-text">{{ quiz.description }}</p>
+                    <a routerLink="/quiz/{{ quiz.name }}" class="btn btn-outline-primary">Give {{ quiz.name }} quiz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
